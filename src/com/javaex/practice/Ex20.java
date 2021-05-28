@@ -8,12 +8,12 @@ public class Ex20 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int a = 0;
-		int b = 1;
+		int i_num_bank = 0;
+		int G_reset = 1;
 		
 		
 		
-		while ( b != 0 ) {
+		while ( G_reset != 0 ) {
 			
 			double rand_num = Math.random();
 			int int_rand_num = (int)(rand_num * 101);
@@ -22,12 +22,12 @@ public class Ex20 {
 			System.out.println("  [숫자맞추기게임 시작]  ");
 			System.out.println("=====================");
 			
-			while(a !=int_rand_num ) {
+			while(i_num_bank !=int_rand_num ) {
 				
 				System.out.print(">>");
 				int i_num = sc.nextInt();
 				
-				a = i_num;
+				i_num_bank = i_num;
 				
 				if(i_num == int_rand_num) {
 					System.out.println("맞았습니다.");
@@ -41,10 +41,10 @@ public class Ex20 {
 			System.out.print("게임을 종료하시겠습니까?(y/n) >>");
 			char re_A = sc.next().charAt(0);
 			if (re_A == 'n') {
-				b = 1;
-				a = 0;
+				G_reset = 1;
+				i_num_bank = 0;
 			}else {
-				b = 0;
+				G_reset = 0;
 			}
 			
 			
